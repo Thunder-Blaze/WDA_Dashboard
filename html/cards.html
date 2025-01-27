@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Dashboard</title> 
+        <link rel="stylesheet" href="cards.css">  
+        <script src="cards.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+<body>
+
+    <div class="dashboard">
+        <div class="card update-card">
+            <div class="update-date">Feb 12th 2024</div>
+            <h2>Sales revenue increased</h2>
+            <div style="color: #4ade80">40% in 1 week</div>
+        </div>
+
+        <div class="card" id="netIncomeCard">
+            <div class="card-header">
+                <h3>Net Income</h3>
+            </div>
+            <div class="metric-value">$193.000</div>
+            <div class="metric-change positive">↗ +35% from last month</div>
+            <div class="chart-container" id="revenueChart">
+                <canvas id="revenueCanvas"></canvas>
+            </div>
+        </div>
+
+        <div class="card" id="totalReturnCard">
+            <div class="card-header">
+                <h3>Total Return</h3>
+            </div>
+            <div class="metric-value">$32.000</div>
+            <div class="metric-change negative">↘ -24% from last month</div>
+            <div class="sales-report" id="salesReport">
+                <div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Product Launched (233)</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Ongoing Product (23)</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 45%"></div>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Product Sold (482)</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
