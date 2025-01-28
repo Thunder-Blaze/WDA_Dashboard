@@ -101,3 +101,44 @@
             }
         });
     
+
+
+
+        function createMobileToggle() {
+            const toggle = document.createElement('button');
+            toggle.innerHTML = '☰';
+            toggle.style.cssText = `
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                z-index: 1001;
+                background: white;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                display: none;
+                cursor: pointer;
+            `;
+            document.body.appendChild(toggle);
+
+            const mediaQuery = window.matchMedia('(max-width: 768px)');
+            function handleMobileChange(e) {
+                toggle.style.display = e.matches ? 'block' : 'none';
+            }
+            mediaQuery.addListener(handleMobileChange);
+            handleMobileChange(mediaQuery);
+
+            toggle.addEventListener('click', () => {
+                document.getElementById('sidebar').classList.toggle('active');
+            });
+        }
+
+        const menuItems = document.querySelectorAll('.menu-item');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuItems.forEach(menuItem => menuItem.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+
+        createMobileToggle();
