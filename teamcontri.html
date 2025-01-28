@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Collaboration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafb;
+    }
+
+    .card {
+      max-width: 400px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .card h2 {
+      margin: 0 0 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+
+    .team-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .team-member {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .team-member .avatar {
+      font-size: 2rem;
+      margin-right: 12px;
+    }
+
+    .team-member .info {
+      flex: 1;
+    }
+
+    .team-member .info h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .team-member .info p {
+      margin: 4px 0 0;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .badge {
+      padding: 4px 8px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      text-transform: capitalize;
+    }
+
+    .badge.completed {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .badge.in-progress {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+
+    .badge.pending {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <h2>Team Collaboration</h2>
+      <button class="button" onclick="addMember()">+ Add Member</button>
+    </div>
+    <ul class="team-list" id="teamList">
+      <li class="team-member">
+        <div class="avatar">🧑🏻‍💻</div>
+        <div class="info">
+          <h3>Ravindra Jadeja</h3>
+          <p>Working on Github Project Repository</p>
+        </div>
+        <span class="badge completed">Completed</span>
+      </li>
+      <li class="team-member">
+        <div class="avatar">👨🏽‍💻</div>
+        <div class="info">
+          <h3>Mohammed Siraj</h3>
+          <p>Working on Integrate User Authentication System</p>
+        </div>
+        <span class="badge in-progress">In Progress</span>
+      </li>
+      <li class="team-member">
+        <div class="avatar">👨🏾‍💻</div>
+        <div class="info">
+          <h3>Mohammed Shami</h3>
+          <p>Working on Develop Search and Filter Functionality</p>
+        </div>
+        <span class="badge pending">Pending</span>
+      </li>
+      <li class="team-member">
+        <div class="avatar">👨‍💻</div>
+        <div class="info">
+          <h3>Jasprit Bumrah</h3>
+          <p>Working on Responsive Layout for Homepage</p>
+        </div>
+        <span class="badge in-progress">In Progress</span>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    function addMember() {
+      alert('Add Member functionality not implemented yet!');
+    }
+  </script>
+</body>
+</html>
