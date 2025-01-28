@@ -1,0 +1,130 @@
+.sidebar {
+  margin: 0; 
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #022c22;
+  color: white;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+.sidebar h1 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  font-family: serif;
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color:#d1d5db;
+  padding: 10px;
+  scale: 0.9;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.1s, color 0.1s;
+  position: relative;
+  display: flex;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+.menu li.active, .menu li:hover {
+  /* background-color: #065f46; */
+  color: white;
+  scale: 1;
+  transform-origin: left;
+}
+.menu li.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;  
+  width: 4px;
+  background-color:#4ade80 ;
+  border-radius: 4px;
+}
+.menu li.active i {
+  color: #4ade80;
+}
+.menu li i {
+  margin-right: 10px;
+  transition: color 0.1s;
+}
+.menu li .badge {
+  background-color: #4ade80;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-heading {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 16px 0 8px;
+  color: white;
+  padding-left: 8px;
+}
+.general {
+  margin-top: 24px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color:#4ade80;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+.profile-info {
+  margin-left: 12px;
+}
+.profile-info p {
+  margin: 0;
+  line-height: 1.2;
+}
+.profile-info p.name {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.profile-info p.email {
+  font-size: 0.7rem;
+  color: #d1d5db;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+      transform: translateX(-100%);
+      transition: transform 0.3s;
+      z-index: 1000;
+  }
+
+  .sidebar.active {
+      transform: translateX(0);
+  }
+}

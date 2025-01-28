@@ -1,220 +1,81 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-}
-
-  .sidebar {
-    margin: 0; 
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #022c22;
-    color: white;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 16px;
-  }
-  .sidebar h1 {
-    font-size: 1.5rem;
-    margin-bottom: 24px;
-    font-family: serif;
-  }
-  .menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .menu li {
-    display: flex;
-    align-items: center;
-    font-size: 0.8rem;
-    color:#d1d5db;
-    padding: 10px;
-    margin-bottom: 8px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.1s, color 0.1s;
-    position: relative;
-  }
-  .menu li.active, .menu li:hover {
-    /* background-color: #065f46; */
-    color: white;
-    font-size: 0.9rem;
-  }
-  .menu li.active::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;  
-    width: 4px;
-    background-color:#4ade80 ;
-    border-radius: 4px;
-  }
-  .menu li.active i {
-    color: #4ade80;
-  }
-  .menu li i {
-    margin-right: 10px;
-    transition: color 0.1s;
-  }
-  .menu li .badge {
-    background-color: #4ade80;
-    color: white;
-    font-size: 0.7rem;
-    font-weight: bold;
-    padding: 2px 8px;
-    border-radius: 999px;
-    margin-left: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .menu-heading {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 16px 0 8px;
-    color: white;
-    padding-left: 8px;
-  }
-  .general {
-    margin-top: 24px;
-  }
-  .profile {
-    display: flex;
-    align-items: center;
-    margin-top: 16px;
-  }
-  .profile img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color:#4ade80;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-  }
-  .profile-info {
-    margin-left: 12px;
-  }
-  .profile-info p {
-    margin: 0;
-    line-height: 1.2;
-  }
-  .profile-info p.name {
-    font-weight: bold;
-    font-size: 0.8rem;
-  }
-  .profile-info p.email {
-    font-size: 0.7rem;
-    color: #d1d5db;
-  }
-
-body { 
-    background-color: #f5f5f5;
-    display: flex;  
-}
-
-.dashboard {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
 .card {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: box-shadow 0.3s ease;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .update-card {
-    background: #022c22;
-    color: white;
+  background: #022c22;
+  color: white;
 }
 
 .metric-value {
-    font-size: 2em;
-    font-weight: bold;
-    margin: 10px 0;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
 .metric-change {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9em;
 }
 
 .positive {
-    color: #10b981;
+  color: #10b981;
 }
 
 .negative {
-    color: #ef4444;
+  color: #ef4444;
 }
 
 .chart-container {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
 }
 
 .chart-container.expanded {
-    height: 300px;
-    margin-top: 20px;
+  height: 300px;
+  margin-top: 20px;
 }
 
 .progress-bar {
-    background: #e5e7eb;
-    height: 8px;
-    border-radius: 4px;
-    margin: 10px 0;
+  background: #e5e7eb;
+  height: 8px;
+  border-radius: 4px;
+  margin: 10px 0;
 }
 
 .progress-fill {
-    background: #86efac;
-    height: 100%;
-    border-radius: 4px;
-    transition: width 0.3s ease;
+  background: #86efac;
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
 }
 
 .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .sales-report {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
 }
 
 .sales-report.expanded {
-    height: 200px;
-    margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-    .dashboard {
-        grid-template-columns: 1fr;
-    }
+  height: 200px;
+  margin-top: 20px;
 }
