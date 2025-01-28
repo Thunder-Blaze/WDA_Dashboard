@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+.dashboard {
+    padding: 20px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header h1 {
+    margin: 0;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button.add {
+    background-color: #094a32;
+    color: white;
+}
+.button.import {
+    background-color: white;
+    color: #094a32;
+    border: 1px solid #094a32;
+}
+.stats {
+    display: flex;
+    gap: 20px;
+}
+.stat {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.stat.total {
+    background-color:#094a32;
+    color: white;
+}
+.stat.ended, .stat.running, .stat.pending {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+}
+.stat h2 {
+    margin: 0;
+    font-size: 2em;
+}
+.stat p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+}
